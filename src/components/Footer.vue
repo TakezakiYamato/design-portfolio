@@ -2,7 +2,8 @@
   <div class="footer">
     <div class="footer-contents">
       <div class="sns-icon">
-        <img src="../assets/Vector-1.svg">
+        <img src="../assets/twitter.svg">
+        <img src="../assets/facebook.svg">
       </div>
       <div class="footer-title">
         <h4>Yamato Takezaki</h4>
