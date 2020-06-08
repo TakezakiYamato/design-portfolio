@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id=app>
     <Header/>
     <Top/>
     <Skill/>
@@ -30,3 +30,11 @@ export default {
   }),
 };
 </script>
+<style>
+/* Google fontの導入 */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;600&family=Noto+Sans+JP&display=swap');
+#app {
+  font-family: 'Montserrat', sans-serif;
+  color: #1D2B95;
+}
+</style>

@@ -6,12 +6,38 @@ export default {
   data () {
     return {
       data: {
-        label: [],
+        label: false,
+        labels: ["Adobe XD", "Figma", "Illustrator", "Photoshop"],
         datasets: [{
-          data: [],
-          label: 'Design Software',
-          backgroundColor: 'grey',
+          data: [3, 4, 2, 1],
+          label: false,
+          borderColor: 'rgba(32, 42, 147, 0.85)',
+          borderWidth: 1,
+          backgroundColor: 'rgba(32, 42, 147, 0.65)',
+          pointRadius: 0,
+          fontColor: 'white',
+          fontSize: 16
         }]
+      },
+      options: {
+        legend: {
+          display: false
+        },
+        tooltips: {
+          enabled: false
+        },
+        scale: {
+          pointLabels: {
+            fontSize: 14,
+            fontColor: 'rgba(32, 42, 147, 0.95)',
+            fontFamily: "'Montserrat', sans-serif"
+          },
+          ticks: {
+            max: 5,
+            stepSize: 1,
+            beginAtZero: true
+          }
+        }
       }
     }
   },

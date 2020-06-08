@@ -7,3 +7,8 @@
     </div>
   </div>
 </template>
+<style scoped>
+.about-contents p {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+</style>
