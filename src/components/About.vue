@@ -8,7 +8,24 @@
   </div>
 </template>
 <style scoped>
+#about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-contents {
+  width: 80%;
+}
+.about-contents h2 {
+  letter-spacing: 0.03em;
+  padding-bottom: 10px;
+}
 .about-contents p {
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
 }
 </style>
