@@ -12,7 +12,7 @@
           color="#1D2B95"
         >
           <v-tab href="#tab-1">Design Software</v-tab>
-          <v-tab href="#tab-2">Programming Language</v-tab>
+          <v-tab href="#tab-2">Front End</v-tab>
           <v-tab href="#tab-3">Development Option</v-tab>
         </v-tabs>
         <v-tabs-items
@@ -25,11 +25,11 @@
               <div class="skill-chip">
                 <v-chip
                   class="chip"
-                  v-for="skill in skills" :key="skill.design"
+                  v-for="design in designs" :key="design"
                   color="rgba(32, 42, 147, 0.88)"
                   text-color="white"
                 >
-                  {{ skill.design }}
+                  {{ design }}
                 </v-chip>
               </div>
               <div class="chart">
@@ -40,15 +40,39 @@
           <v-tab-item
             value="tab-2"
           >
-            <div class="skill-tip">
-              <v-chip>HTML</v-chip>
+            <div class="skill-content">
+              <div class="skill-chip">
+               <v-chip
+                  class="chip"
+                  v-for="frontend in frontends" :key="frontend"
+                  color="rgba(32, 42, 147, 0.88)"
+                  text-color="white"
+                >
+                  {{ frontend }}
+                </v-chip>
+              </div>
+              <div class="chart">
+                <Front/>
+              </div>
             </div>
           </v-tab-item>
           <v-tab-item
             value="tab-3"
           >
-            <div class="skill-tip">
-              <v-chip>Git</v-chip>
+            <div class="skill-content">
+              <div class="skill-chip">
+                <v-chip
+                  class="chip"
+                  v-for="dev in devs" :key="dev"
+                  color="rgba(32, 42, 147, 0.88)"
+                  text-color="white"
+                >
+                  {{ dev }}
+                </v-chip>
+              </div>
+              <div class="chart">
+                <Devop/>
+              </div>
             </div>
           </v-tab-item>
         </v-tabs-items>
@@ -58,19 +82,25 @@
 </template>
 <script>
 import Design from './Design';
+import Front from './Front';
+import Devop from './Devop';
 
 export default {
   components: {
-    Design
+    Design,
+    Front,
+    Devop
   },
   data () {
     return {
       model: 'tab-1',
-      skills: [
-        { design: 'Adobe XD' },
-        { design: 'Figma' },
-        { design: 'Illustrator' },
-        { design: 'Photoshop' }
+      designs: [
+        'Adobe XD', 'Figma', 'Illustrator', 'Photoshop'
+      ],
+      frontends: [
+        'HTML', 'CSS', 'Javascript', 'Vue'
+      ],
+      devs: ['Linux', 'Git', 'GitHub', 'Firebase'
       ]
     }
   }
@@ -90,13 +120,22 @@ export default {
 .skill-text {
   margin-bottom: 32px;
 }
+.skill-text h2 {
+  letter-spacing: 0.03em;
+  padding-bottom: 10px;
+}
 .skill-text p {
   width: 62%;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 15px;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+}
+.skill-category {
+  margin-top: 64px;
 }
 .skill-content {
-  margin: 48px 4px;
+  margin: 60px 4px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
